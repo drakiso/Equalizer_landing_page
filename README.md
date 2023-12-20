@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [My solution]()
-- Live Site URL: [Live site]()
+- Solution URL: [My solution](https://www.frontendmentor.io/solutions/equalizer-landing-page-C-IJ_IiVz3)
+- Live Site URL: [Live site](https://drakiso.github.io/Equalizer_landing_page/)
 
 ## My process
 
