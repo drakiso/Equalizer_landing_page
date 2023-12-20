@@ -1,0 +1,43 @@
+body {
+    @include typography(1.25rem);
+    line-height: 170%;
+
+    @media screen and (max-width: 1279.90px) {
+        @include typography(1.125rem);
+        line-height: 155.556%;
+    }
+
+    @media screen and (max-width: 767.90px) {
+        @include typography(1rem);
+        line-height: 162.5%;
+    }
+}
+
+h1 {
+    @include typography(5.5rem);
+    font-weight: 700;
+    line-height: 100%;
+
+    @media screen and (max-width: 1279.90px) {
+        @include typography(4rem);
+        font-weight: 700;
+        line-height: 100%;
+    }
+
+    @media screen and (max-width: 767.90px) {
+        @include typography(2.5rem);
+        line-height: 120%;
+    }
+}
+
+h2 {
+    @include typography(2.5rem);
+    font-weight: 700;
+    line-height: 130%;
+
+    @media screen and (max-width: 1279.90px) {
+        @include typography(2rem);
+        font-weight: 700;
+        line-height: 125%;
+    }
+}

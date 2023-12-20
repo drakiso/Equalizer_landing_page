@@ -1,0 +1,18 @@
+@mixin typography($size){
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: $size;
+}
+
+@mixin download-btn($pt, $pe, $pb, $ps, $color, $bg-color, $hover-color) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $color;
+    font-weight: 700;
+    background-color: $bg-color;
+    padding: $pt $pe $pb $ps;
+    border-radius: $b-radius;
+    &:hover {
+        background-color: $hover-color;
+    }
+}

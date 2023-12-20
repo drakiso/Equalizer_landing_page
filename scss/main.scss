@@ -1,0 +1,284 @@
+@import "./utils/variables",
+        "./utils/mixins";
+
+@import "./bases/reset",
+        "./bases/typography";
+
+
+/* body's background style */
+body {
+    background: url(../assets/images/bg-pattern-1.svg) no-repeat right top -40px,
+    url(../assets/images/bg-main-desktop.png) no-repeat top -112px right -27px / cover;
+
+    @media screen and (max-width: 1279.90px) {
+        background: url(../assets/images/bg-pattern-1.svg) no-repeat 
+        right -37px top -40px, 
+        url(../assets/images/bg-main-tablet.png) no-repeat top -112px right / contain;
+    }
+
+    @media screen and (max-width: 767.9px) {
+        background: url(../assets/images/bg-main-mobile.png) no-repeat 
+        top -280px left 0;
+    }
+}
+
+/* Wrapper's style  */
+.wrapper {
+    width: 1110px;
+    margin: auto;
+    padding-top: 62px;
+    padding-bottom: 91px;
+
+    @media screen and (max-width: 1279.90px) {
+        width: 696px;
+        padding-bottom: 85px;
+    }
+
+    @media screen and (max-width: 767.90px) {
+        width: 375px;
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+}
+
+header {
+    @media screen and (max-width: 767.90px) {
+        padding-left: 24.15px;
+    }
+}
+
+/* Page title style and banner */
+
+.banner {
+    width: 1015px;
+    margin-top: 127px;
+
+    @media screen and (max-width: 1279.90px) {
+        width: 520px;
+        margin-top: 95px;
+    }
+
+    @media screen and (max-width: 767.90px) {
+        width: 327px;
+        padding-top: 64px;
+        margin: auto;
+    }
+
+    p {
+        padding: 40px 190px 321px 0;
+
+        @media screen and (max-width: 1279.90px) {
+            padding: 28px 6px 249px 0;
+        }
+
+        @media screen and (max-width: 767.90px) {
+            padding: 20px 0 166px;
+        }
+    }
+}
+
+/* Service */
+
+.offer {
+    position: relative;
+    color: $secondary;
+    background: $bg-primary url("../assets/images/bg-pattern-2.svg") scroll
+    no-repeat left 336px bottom 172px;
+    border-radius: $b-radius;
+    height: 600px;
+
+    @media screen and (max-width: 1279.90px) {
+        background: $bg-primary url("../assets/images/bg-pattern-2.svg") scroll
+        no-repeat left 229px top -30px;
+     }
+
+     @media screen and (max-width: 767.90px) {
+        background: $bg-primary url("../assets/images/bg-pattern-2.svg") scroll
+        no-repeat left 48px top 0 / 280px;
+     }
+
+    &-illustration {
+        width: 312px;
+        height: auto;
+        position: relative;
+        left: 102px;
+        top: -213px;
+
+        @media screen and (max-width: 1279.90px) {
+            width: 270.206px;
+            left: 64px;
+            top: -138px;
+         }
+
+         @media screen and (max-width: 767.90px) {
+            width: 208.972px;
+            left: 80.67px;
+            top: -98px;
+         }
+    }
+
+    &-feature {
+        display: flex;
+        flex-direction: column;
+        width: 446px;
+        height: auto;
+        padding: 58px 0 48px;
+        background-color: $bg-secondary;
+        position: absolute;
+        right: 95px;
+        top: 90px;
+        border-radius: $b-radius;
+
+        @media screen and (max-width: 1279.90px) {
+            width: 399px;
+            padding: 48px 0;
+            right: 58px;
+            top: 150px;
+        }
+
+        @media screen and (max-width: 767.90px) {
+            width: 375px;
+            right: 0;
+            top: 380px;
+         }
+
+        h2 {
+            padding-left: 54px;
+
+            @media screen and (max-width: 1279.90px) {
+                padding-left: 48px;
+            }
+
+            @media screen and (max-width: 767.90px) {
+                padding-left: 37px;
+             }
+        }
+
+        p {
+            padding: 22px 59px 48px 54px;
+
+            @media screen and (max-width: 1279.90px) {
+                padding: 12px 49px 45px 48px;
+            }
+
+            @media screen and (max-width: 767.90px) {
+                padding: 12px 37px 45px 36px;
+                @include typography(1.125rem);
+            }
+        }
+
+        .price {
+            padding: 0 0 48px 54px;
+            font-size: 65px;
+            font-weight: 700;
+            display: flex;
+
+            @media screen and (max-width: 1279.90px) {
+                padding-bottom: 45px;
+            }
+
+            @media screen and (max-width: 767.90px) {
+                padding-left: 42px;
+            }
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: 400;
+            padding-left: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            align-self: center;
+        }
+        
+        .download-ios {
+            @include download-btn(15px, 95px, 14px , 96px, 
+            $secondary, $bg-primary, $primary-hover);
+            margin-bottom: 1rem;
+            
+            @media screen and (max-width: 1279.90px) {
+                @include download-btn(15px, 77px, 14px , 77px, 
+                $secondary, $bg-primary, $primary-hover);
+            }
+
+        }
+
+        .download-android {
+            @include download-btn(15px, 76.5px, 14px , 77px, 
+            $primary, $bg-tertiary, $secondary-hover);
+
+            @media screen and (max-width: 1279.90px) {
+                @include download-btn(15px, 57.5px, 14px , 59px, 
+                $primary, $bg-tertiary, $secondary-hover);
+            }
+        }
+    }
+}
+
+/* footer */
+
+footer {
+    margin-top: 202px;
+    display: flex;
+    align-items: flex-start;
+
+    @media screen and (max-width: 1279.90px) {
+        margin-top: 183px;
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 767.90px) {
+        margin-top: 390px;
+        padding: 0 24px;
+    }
+
+    .contact {
+        width: 100%;
+        margin-left: 137.76px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 1279.90px) {
+            margin-left: 0;
+            margin-top: 32.01px;
+        }
+
+        @media screen and (max-width: 767.90px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    p{
+        width: 366px;
+        font-size: 1rem;
+        line-height: 162.5%;
+
+        @media screen and (max-width: 767.90px) {
+            width: 327px;
+            margin-bottom: 64px;
+        }
+       
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    .social-media {
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+
+        .hover:hover {
+            fill: $tertiary-hover;
+        }
+    }
+}
