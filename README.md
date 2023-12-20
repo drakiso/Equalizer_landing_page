@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Alt text](./skilled_elearning_landing_page.png?raw=true "Skilled landing page screenshot")
+![Alt text](./equalizer_landing_page.png?raw=true "Skilled landing page screenshot")
 
 ### Links
 
